@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CuántoLlega — Compara cuánto recibe tu familia en Honduras</title>
+<meta name="description" content="Compara en tiempo real cuántos Lempiras recibe tu familia en Honduras según el servicio (Wise, Remitly, Western Union, MoneyGram, Xoom). Sin comisiones ocultas." />
+<meta name="keywords" content="enviar dinero a Honduras, remesas Honduras, Wise Honduras, Remitly Honduras, Western Union Honduras, tipo de cambio Lempira" />
+<meta property="og:title" content="CuántoLlega — Compara remesas a Honduras" />
+<meta property="og:description" content="Descubre cuánto le llega realmente a tu familia. Comparador transparente de remesas a Honduras." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://cuantollega.com" />
+<meta property="og:locale" content="es_HN" />
+<link rel="canonical" href="https://cuantollega.com" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E💸%3C/text%3E%3C/svg%3E" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          brand: { 50:'#EEF4FB', 100:'#D9E6F5', 500:'#1F6FEB', 600:'#1858BD', 700:'#0F3D8A', 900:'#0A2348' },
+          accent: { 500:'#10B981', 600:'#059669' }
+        },
+        fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }
+      }
+    }
+  }
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "CuántoLlega",
+  "url": "https://cuantollega.com",
+  "applicationCategory": "FinanceApplication",
+  "description": "Comparador transparente de remesas a Honduras.",
+  "operatingSystem": "Web",
+  "inLanguage": "es-HN"
+}
+</script>
+</head>
+
+<body class="font-sans bg-slate-50 text-slate-900 antialiased">
+
+<header class="sticky top-0 z-40 bg-white/85 backdrop-blur border-b border-slate-200">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-2 font-bold text-lg text-brand-900">
+      <span class="text-2xl">💸</span>
+      <span>Cuánto<span class="text-brand-500">Llega</span></span>
+    </a>
+    <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-600">
+      <a href="#comparar" class="hover:text-brand-600">Comparar</a>
+      <a href="#como" class="hover:text-brand-600">Cómo funciona</a>
+      <a href="#faq" class="hover:text-brand-600">Preguntas</a>
+    </nav>
+    <a href="#comparar" class="text-sm font-semibold bg-brand-500 hover:bg-brand-600 text-white px-4 py-2 rounded-lg transition">Comparar ahora</a>
+  </div>
+</header>
+
+<section class="bg-gradient-to-b from-brand-50 to-slate-50 pt-12 pb-16 px-4">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center max-w-3xl mx-auto mb-10">
+      <span class="inline-block text-xs font-semibold tracking-wide uppercase text-brand-600 bg-brand-100 px-3 py-1 rounded-full mb-4">
+        Hecho por hondureños, para los catrachos 🇭🇳
+      </span>
+      <h1 class="text-4xl sm:text-5xl font-extrabold text-brand-900 leading-tight mb-4">
+        ¿Cuánto le <span class="text-brand-500">llega</span> de verdad a tu familia?
+      </h1>
+      <p class="text-lg text-slate-600 leading-relaxed">
+        Compara en segundos cuántos Lempiras recibe tu familia en Honduras según el servicio.
+        Sin sorpresas. Sin letra chiquita. Sin comisiones que se comen tu envío.
+      </p>
+    </div>
+
+    <div id="comparar" class="bg-white rounded-2xl shadow-xl border border-slate-200 p-6 sm:p-8 max-w-3xl mx-auto">
+      <div class="grid sm:grid-cols-2 gap-4 mb-5">
+        <div>
+          <label for="amount" class="block text-sm font-medium text-slate-700 mb-1.5">Quiero enviar</label>
+          <div class="relative">
+            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 font-medium">$</span>
+            <input id="amount" type="number" min="1" step="1" value="500"
+              class="w-full pl-7 pr-16 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-lg font-semibold" />
+            <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 text-sm font-medium">USD</span>
+          </div>
+        </div>
+        <div>
+          <label for="from" class="block text-sm font-medium text-slate-700 mb-1.5">Desde</label>
+          <select id="from" class="w-full px-3 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-base font-medium bg-white">
+            <option value="US">🇺🇸 Estados Unidos</option>
+            <option value="ES">🇪🇸 España</option>
+            <option value="MX">🇲🇽 México</option>
+            <option value="CA">🇨🇦 Canadá</option>
+          </select>
+        </div>
+      </div>
+
+      <button id="compareBtn" class="w-full bg-brand-500 hover:bg-brand-600 text-white font-semibold py-3.5 rounded-lg transition flex items-center justify-center gap-2 text-base">
+        <span>Comparar ahora</span>
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+        </svg>
+      </button>
+
+      <p id="rateInfo" class="text-xs text-slate-500 mt-3 text-center">Tipo de cambio del mercado: cargando…</p>
+    </div>
+
+    <div id="results" class="hidden max-w-4xl mx-auto mt-8">
+      <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+        <div class="px-5 sm:px-6 py-4 bg-slate-50 border-b border-slate-200 flex items-center justify-between flex-wrap gap-2">
+          <h2 class="font-bold text-slate-900">Comparativa para enviar <span id="amountShown" class="text-brand-600">$500</span></h2>
+          <span class="text-xs text-slate-500">Ordenado por mejor relación</span>
+        </div>
+        <div id="resultsBody"></div>
+      </div>
+      <p class="text-xs text-slate-500 mt-3 text-center px-4">
+        ⚠️ Los datos son estimaciones basadas en tarifas públicas. El precio final puede variar al momento del envío. Te recomendamos confirmar en la app del proveedor antes de enviar.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="como" class="py-16 px-4 bg-white">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl sm:text-4xl font-bold text-brand-900 mb-3">Cómo funciona CuántoLlega</h2>
+      <p class="text-slate-600 max-w-2xl mx-auto">Mostramos lo que los demás esconden: el costo real de enviar a Honduras.</p>
+    </div>
+    <div class="grid sm:grid-cols-3 gap-6">
+      <div class="bg-slate-50 rounded-xl p-6 border border-slate-100">
+        <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-lg flex items-center justify-center text-2xl font-bold mb-4">1</div>
+        <h3 class="font-bold text-slate-900 mb-2">Pones cuánto quieres enviar</h3>
+        <p class="text-sm text-slate-600 leading-relaxed">Escribes el monto en dólares (o euros, pesos, etc.) y desde qué país envías.</p>
+      </div>
+      <div class="bg-slate-50 rounded-xl p-6 border border-slate-100">
+        <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-lg flex items-center justify-center text-2xl font-bold mb-4">2</div>
+        <h3 class="font-bold text-slate-900 mb-2">Comparamos al instante</h3>
+        <p class="text-sm text-slate-600 leading-relaxed">Consultamos el tipo de cambio del mercado y le aplicamos las comisiones reales de cada servicio.</p>
+      </div>
+      <div class="bg-slate-50 rounded-xl p-6 border border-slate-100">
+        <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-lg flex items-center justify-center text-2xl font-bold mb-4">3</div>
+        <h3 class="font-bold text-slate-900 mb-2">Tú decides</h3>
+        <p class="text-sm text-slate-600 leading-relaxed">Eliges el servicio que más Lempiras le da a tu familia y haces clic en "Enviar con…".</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-16 px-4 bg-slate-50">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center mb-10">
+      <h2 class="text-3xl font-bold text-brand-900 mb-3">¿Por qué confiar en CuántoLlega?</h2>
+    </div>
+    <div class="grid sm:grid-cols-3 gap-6">
+      <div class="bg-white rounded-xl p-6 border border-slate-200">
+        <div class="text-3xl mb-3">🔍</div>
+        <h3 class="font-bold mb-2">100% transparente</h3>
+        <p class="text-sm text-slate-600">Mostramos comisiones, spread y total recibido. Nada escondido.</p>
+      </div>
+      <div class="bg-white rounded-xl p-6 border border-slate-200">
+        <div class="text-3xl mb-3">⚡</div>
+        <h3 class="font-bold mb-2">Tipo de cambio en vivo</h3>
+        <p class="text-sm text-slate-600">Actualizamos las tasas cada hora con datos del mercado real.</p>
+      </div>
+      <div class="bg-white rounded-xl p-6 border border-slate-200">
+        <div class="text-3xl mb-3">🇭🇳</div>
+        <h3 class="font-bold mb-2">Hecho para Honduras</h3>
+        <p class="text-sm text-slate-600">Conocemos los bancos, billeteras y puntos de pago locales: BAC, Atlántida, Tigo Money, Tengo, Banco de Occidente.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="py-16 px-4 bg-white">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-3xl font-bold text-brand-900 mb-8 text-center">Preguntas frecuentes</h2>
+    <div class="space-y-3">
+      <details class="bg-slate-50 rounded-lg p-5 border border-slate-200 group">
+        <summary class="font-semibold cursor-pointer flex justify-between items-center text-slate-900">
+          ¿Cuál es la app más barata para enviar dinero a Honduras?
+          <span class="text-brand-500 group-open:rotate-45 transition">+</span>
+        </summary>
+        <p class="mt-3 text-sm text-slate-600 leading-relaxed">
+          Depende del monto y método de pago. Para envíos &gt;$200 USD, <strong>Wise</strong> suele ser el más barato porque usa el tipo de cambio del mercado real con una comisión fija pequeña. Para envíos chicos y rápidos, <strong>Remitly</strong> tiene buenas tarifas. Usa nuestro comparador para ver tu caso específico.
+        </p>
+      </details>
+      <details class="bg-slate-50 rounded-lg p-5 border border-slate-200 group">
+        <summary class="font-semibold cursor-pointer flex justify-between items-center text-slate-900">
+          ¿Cuánto demora una remesa en llegar a Honduras?
+          <span class="text-brand-500 group-open:rotate-45 transition">+</span>
+        </summary>
+        <p class="mt-3 text-sm text-slate-600 leading-relaxed">
+          Western Union y MoneyGram para retiro en efectivo: minutos. Wise a cuenta de banco: 1–2 días hábiles (a veces el mismo día). Remitly Express: minutos. Remitly Economy: 3–5 días. Xoom: minutos a horas.
+        </p>
+      </details>
+      <details class="bg-slate-50 rounded-lg p-5 border border-slate-200 group">
+        <summary class="font-semibold cursor-pointer flex justify-between items-center text-slate-900">
+          ¿Necesita mi familia una cuenta de banco para recibir?
+          <span class="text-brand-500 group-open:rotate-45 transition">+</span>
+        </summary>
+        <p class="mt-3 text-sm text-slate-600 leading-relaxed">
+          No siempre. Western Union, MoneyGram, Ria y Remitly tienen retiro en efectivo en miles de puntos en Honduras (Banco Atlántida, BAC, Banco de Occidente, supermercados). Tigo Money y Tengo permiten recibir en la billetera del celular. Wise sí requiere cuenta bancaria.
+        </p>
+      </details>
+      <details class="bg-slate-50 rounded-lg p-5 border border-slate-200 group">
+        <summary class="font-semibold cursor-pointer flex justify-between items-center text-slate-900">
+          ¿De dónde sacan los datos del tipo de cambio?
+          <span class="text-brand-500 group-open:rotate-45 transition">+</span>
+        </summary>
+        <p class="mt-3 text-sm text-slate-600 leading-relaxed">
+          El tipo de cambio del mercado (mid-market rate) lo obtenemos de una API pública gratuita actualizada cada hora. Las comisiones y spreads de cada proveedor están basadas en sus tarifas públicas. El precio final puede variar según método de pago, hora y promociones del proveedor.
+        </p>
+      </details>
+      <details class="bg-slate-50 rounded-lg p-5 border border-slate-200 group">
+        <summary class="font-semibold cursor-pointer flex justify-between items-center text-slate-900">
+          ¿Cobran por usar CuántoLlega?
+          <span class="text-brand-500 group-open:rotate-45 transition">+</span>
+        </summary>
+        <p class="mt-3 text-sm text-slate-600 leading-relaxed">
+          No. Es completamente gratis. Cuando haces clic en "Enviar con…", el servicio que elijas nos paga una pequeña comisión por referido — pero el precio que tú pagas es exactamente el mismo que si fueras directo a su web.
+        </p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="py-16 px-4 bg-gradient-to-br from-brand-700 to-brand-900 text-white text-center">
+  <div class="max-w-2xl mx-auto">
+    <h2 class="text-3xl sm:text-4xl font-bold mb-4">Cada Lempira cuenta.</h2>
+    <p class="text-brand-100 mb-7 leading-relaxed">
+      Antes de mandar plata a Honduras, asegurate que esté llegando lo más que se pueda. Tarda menos de 10 segundos.
+    </p>
+    <a href="#comparar" class="inline-block bg-white text-brand-700 hover:bg-brand-50 font-semibold px-7 py-3.5 rounded-lg transition">Comparar ahora →</a>
+  </div>
+</section>
+
+<footer class="bg-slate-900 text-slate-400 py-10 px-4">
+  <div class="max-w-6xl mx-auto">
+    <div class="flex flex-col sm:flex-row justify-between items-center gap-6 mb-7">
+      <div class="flex items-center gap-2 text-white font-bold text-lg">
+        <span class="text-2xl">💸</span>
+        <span>Cuánto<span class="text-brand-500">Llega</span></span>
+      </div>
+      <nav class="flex gap-6 text-sm">
+        <a href="#comparar" class="hover:text-white">Comparar</a>
+        <a href="#faq" class="hover:text-white">FAQ</a>
+        <a href="mailto:hola@cuantollega.com" class="hover:text-white">Contacto</a>
+      </nav>
+    </div>
+    <div class="text-xs leading-relaxed border-t border-slate-800 pt-6 max-w-4xl">
+      <p class="mb-3">
+        <strong class="text-slate-300">Aviso de afiliados:</strong> CuántoLlega recibe una comisión cuando usas alguno de los enlaces a servicios de remesas. Esto nos permite mantener el comparador gratis y actualizado. Las comisiones no afectan el precio que pagas ni nuestras recomendaciones — ordenamos siempre por la mejor relación para el usuario.
+      </p>
+      <p>© <span id="year"></span> CuántoLlega. No somos un servicio de envío de dinero ni un asesor financiero. Verifica siempre las condiciones en la plataforma del proveedor antes de enviar.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+const PROVIDERS = [
+  { id:'wise', name:'Wise', emoji:'🟢', fee:4.20, spread:0.006,
+    speed:'1–2 días hábiles', receive:'Cuenta bancaria',
+    affiliate:'https://wise.com/invite/u/#placeholder', note:'Tipo de cambio del mercado real' },
+  { id:'remitly', name:'Remitly', emoji:'🟠', fee:0, spread:0.018,
+    speed:'Minutos (Express) / 3–5 días (Economy)', receive:'Banco / efectivo / Tigo Money',
+    affiliate:'https://www.remitly.com/?ref=#placeholder', note:'Promociones para primer envío' },
+  { id:'xoom', name:'Xoom (PayPal)', emoji:'🔵', fee:4.99, spread:0.025,
+    speed:'Minutos a horas', receive:'Banco / efectivo / Tigo Money',
+    affiliate:'https://www.xoom.com/honduras/send-money?ref=#placeholder', note:'Bueno si ya tienes PayPal' },
+  { id:'westernunion', name:'Western Union', emoji:'🟡', fee:5.00, spread:0.030,
+    speed:'Minutos', receive:'Efectivo en miles de puntos',
+    affiliate:'https://www.westernunion.com/us/en/send-money-online.html?ref=#placeholder', note:'Red enorme en HN, pero cara' },
+  { id:'moneygram', name:'MoneyGram', emoji:'🔴', fee:3.99, spread:0.025,
+    speed:'Minutos', receive:'Efectivo / banco',
+    affiliate:'https://www.moneygram.com/mgo/us/en/?ref=#placeholder', note:'Disponible en BAC, Atlántida, supermercados' },
+  { id:'ria', name:'Ria Money', emoji:'🟣', fee:2.99, spread:0.020,
+    speed:'Minutos a horas', receive:'Efectivo / banco',
+    affiliate:'https://www.riamoneytransfer.com/?ref=#placeholder', note:'Buena opción para envíos chicos' }
+];
+
+let midRateHNL = null;
+
+async function loadRate() {
+  try {
+    const r = await fetch('https://open.er-api.com/v6/latest/USD');
+    const data = await r.json();
+    if (data && data.rates && data.rates.HNL) {
+      midRateHNL = data.rates.HNL;
+      document.getElementById('rateInfo').innerHTML =
+        `Tipo de cambio del mercado: <strong>1 USD = ${midRateHNL.toFixed(4)} HNL</strong> · Actualizado: ${new Date(data.time_last_update_utc).toLocaleString('es-HN')}`;
+    } else { throw new Error('No HNL rate'); }
+  } catch (e) {
+    midRateHNL = 24.85;
+    document.getElementById('rateInfo').innerHTML =
+      `Tipo de cambio aproximado: <strong>1 USD = ${midRateHNL} HNL</strong> · (No se pudo cargar en vivo)`;
+  }
+}
+
+function calculate(amount, p) {
+  const effectiveRate = midRateHNL * (1 - p.spread);
+  const usableUSD = Math.max(0, amount - p.fee);
+  const hnlReceived = usableUSD * effectiveRate;
+  const totalCostUSD = p.fee + (amount * p.spread);
+  return { hnlReceived, effectiveRate, totalCostUSD, feePct: (totalCostUSD / amount) * 100 };
+}
+
+function renderResults() {
+  if (!midRateHNL) { alert('Cargando tipo de cambio… intenta de nuevo en un segundo.'); return; }
+  const amount = parseFloat(document.getElementById('amount').value) || 0;
+  if (amount < 1) { alert('Ingresa un monto válido en dólares.'); return; }
+
+  document.getElementById('amountShown').textContent = '$' + amount.toLocaleString('en-US');
+
+  const rows = PROVIDERS.map(p => ({ provider: p, ...calculate(amount, p) }))
+                        .sort((a,b) => b.hnlReceived - a.hnlReceived);
+  const best = rows[0];
+
+  const html = rows.map((row, idx) => {
+    const isBest = idx === 0;
+    const diff = best.hnlReceived - row.hnlReceived;
+    const diffText = isBest
+      ? '<span class="text-accent-600 font-semibold">✓ Mejor opción</span>'
+      : `<span class="text-slate-500">−L ${Math.abs(diff).toFixed(0)} menos</span>`;
+    return `
+      <div class="px-5 sm:px-6 py-5 ${idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'} ${isBest ? 'border-l-4 border-accent-500' : 'border-l-4 border-transparent'} grid sm:grid-cols-[1fr_auto_auto] items-center gap-4">
+        <div>
+          <div class="flex items-center gap-2 font-bold text-slate-900">
+            <span class="text-xl">${row.provider.emoji}</span>
+            <span>${row.provider.name}</span>
+            ${isBest ? '<span class="text-[10px] uppercase font-bold bg-accent-500 text-white px-2 py-0.5 rounded">Recomendado</span>' : ''}
+          </div>
+          <div class="text-xs text-slate-500 mt-1">${row.provider.speed} · ${row.provider.receive}</div>
+          <div class="text-[11px] text-slate-400 mt-0.5">${row.provider.note}</div>
+        </div>
+        <div class="text-right">
+          <div class="text-2xl font-extrabold text-brand-900">L ${row.hnlReceived.toLocaleString('es-HN', {maximumFractionDigits: 0})}</div>
+          <div class="text-xs text-slate-500">recibe tu familia</div>
+          <div class="text-[11px] mt-1">${diffText}</div>
+        </div>
+        <div class="sm:text-right">
+          <a href="${row.provider.affiliate}" target="_blank" rel="noopener sponsored"
+             class="inline-block bg-brand-500 hover:bg-brand-600 text-white text-sm font-semibold px-4 py-2.5 rounded-lg transition">
+            Enviar con ${row.provider.name} →
+          </a>
+          <div class="text-[10px] text-slate-400 mt-1.5">Costo total: $${row.totalCostUSD.toFixed(2)} (${row.feePct.toFixed(1)}%)</div>
+        </div>
+      </div>`;
+  }).join('');
+
+  document.getElementById('resultsBody').innerHTML = html;
+  document.getElementById('results').classList.remove('hidden');
+  document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+document.getElementById('year').textContent = new Date().getFullYear();
+document.getElementById('compareBtn').addEventListener('click', renderResults);
+document.getElementById('amount').addEventListener('keydown', e => { if (e.key === 'Enter') renderResults(); });
+loadRate();
+</script>
+
+</body>
+</html>
