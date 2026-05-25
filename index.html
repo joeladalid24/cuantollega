@@ -13,7 +13,7 @@
 <meta property="og:locale" content="es_HN" />
 <link rel="canonical" href="https://cuantollega.com" />
 <meta name="impact-site-verification" value="6c4b77aa-ba25-4ff0-bbb4-88b20b4de81d">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E💸%3C/text%3E%3C/svg%3E" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 130 130'%3E%3Cpath d='M 28.6,44 A 42,42 0 0,1 101.4,44' fill='none' stroke='%231e56c2' stroke-width='11' stroke-linecap='round'/%3E%3Cpolygon points='111.4,61.3 110.1,39.0 92.7,49.0' fill='%231e56c2'/%3E%3Cpath d='M 101.4,86 A 42,42 0 0,1 28.6,86' fill='none' stroke='%2322a63d' stroke-width='11' stroke-linecap='round'/%3E%3Cpolygon points='18.6,68.7 19.9,91.0 37.3,81.0' fill='%2322a63d'/%3E%3Ccircle cx='65' cy='65' r='27' fill='%2322a63d'/%3E%3Ctext x='65' y='75' font-family='Arial' font-weight='700' font-size='30' fill='white' text-anchor='middle'%3E$%3C/text%3E%3C/svg%3E" />
 
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
@@ -21,8 +21,8 @@
     theme: {
       extend: {
         colors: {
-          brand: { 50:'#EEF4FB', 100:'#D9E6F5', 500:'#1F6FEB', 600:'#1858BD', 700:'#0F3D8A', 900:'#0A2348' },
-          accent: { 500:'#10B981', 600:'#059669' }
+          brand: { 50:'#EEF4FB', 100:'#D9E6F5', 400:'#4a90d9', 500:'#1e56c2', 600:'#1A4AA5', 700:'#143B82', 900:'#0d1f52' },
+          accent: { 500:'#22a63d', 600:'#1c8c33', 700:'#176d27' }
         },
         fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }
       }
@@ -51,9 +51,16 @@
 
 <header class="sticky top-0 z-40 bg-white/85 backdrop-blur border-b border-slate-200">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-    <a href="#" class="flex items-center gap-2 font-bold text-lg text-brand-900">
-      <span class="text-2xl">💸</span>
-      <span>Cuánto<span class="text-brand-500">Llega</span></span>
+    <a href="#" class="flex items-center gap-2.5 font-extrabold text-lg tracking-tight">
+      <svg viewBox="0 0 130 130" class="w-9 h-9" aria-label="CuántoLlega logo">
+        <path d="M 28.6,44 A 42,42 0 0,1 101.4,44" fill="none" stroke="#1e56c2" stroke-width="11" stroke-linecap="round"/>
+        <polygon points="111.4,61.3 110.1,39.0 92.7,49.0" fill="#1e56c2"/>
+        <path d="M 101.4,86 A 42,42 0 0,1 28.6,86" fill="none" stroke="#22a63d" stroke-width="11" stroke-linecap="round"/>
+        <polygon points="18.6,68.7 19.9,91.0 37.3,81.0" fill="#22a63d"/>
+        <circle cx="65" cy="65" r="27" fill="#22a63d"/>
+        <text x="65" y="75" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="30" fill="white" text-anchor="middle">$</text>
+      </svg>
+      <span><span class="text-brand-900">cuanto</span><span class="text-accent-500">llega</span><span class="text-brand-400 text-sm font-bold align-baseline">.com</span></span>
     </a>
     <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-600">
       <a href="#comparar" class="hover:text-brand-600">Comparar</a>
@@ -66,14 +73,29 @@
 
 <section class="bg-gradient-to-b from-brand-50 to-slate-50 pt-12 pb-16 px-4">
   <div class="max-w-6xl mx-auto">
-    <div class="text-center max-w-3xl mx-auto mb-10">
-      <span class="inline-block text-xs font-semibold tracking-wide uppercase text-brand-600 bg-brand-100 px-3 py-1 rounded-full mb-4">
-        Hecho por hondureños, para los catrachos 🇭🇳
-      </span>
-      <h1 class="text-4xl sm:text-5xl font-extrabold text-brand-900 leading-tight mb-4">
-        ¿Cuánto le <span class="text-brand-500">llega</span> de verdad a tu familia?
-      </h1>
-      <p class="text-lg text-slate-600 leading-relaxed">
+    <div class="text-center max-w-4xl mx-auto mb-10">
+      <!-- BIG LOGO LOCKUP — usando el SVG exacto del usuario -->
+      <div class="flex items-center justify-center gap-3 sm:gap-5 mb-5">
+        <svg viewBox="0 0 130 130" class="w-20 h-20 sm:w-28 sm:h-28 shrink-0" aria-label="CuántoLlega logo">
+          <path d="M 28.6,44 A 42,42 0 0,1 101.4,44" fill="none" stroke="#1e56c2" stroke-width="11" stroke-linecap="round"/>
+          <polygon points="111.4,61.3 110.1,39.0 92.7,49.0" fill="#1e56c2"/>
+          <path d="M 101.4,86 A 42,42 0 0,1 28.6,86" fill="none" stroke="#22a63d" stroke-width="11" stroke-linecap="round"/>
+          <polygon points="18.6,68.7 19.9,91.0 37.3,81.0" fill="#22a63d"/>
+          <circle cx="65" cy="65" r="27" fill="#22a63d"/>
+          <text x="65" y="75" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="30" fill="white" text-anchor="middle">$</text>
+        </svg>
+        <span class="font-extrabold tracking-tight leading-none text-4xl sm:text-6xl">
+          <span class="text-brand-900">cuanto</span><span class="text-accent-500">llega</span><span class="text-brand-400 text-2xl sm:text-3xl align-top">.com</span>
+        </span>
+      </div>
+
+      <!-- Tagline -->
+      <p class="text-lg sm:text-2xl font-semibold text-slate-700 mb-8">
+        Compara remesadoras y haz que llegue más.
+      </p>
+
+      <!-- Pequeño copy de apoyo -->
+      <p class="text-base text-slate-600 leading-relaxed max-w-2xl mx-auto">
         Compara en segundos cuántos Lempiras recibe tu familia en Honduras según el servicio.
         Sin sorpresas. Sin letra chiquita. Sin comisiones que se comen tu envío.
       </p>
@@ -109,6 +131,26 @@
       </button>
 
       <p id="rateInfo" class="text-xs text-slate-500 mt-3 text-center">Tipo de cambio del mercado: cargando…</p>
+    </div>
+
+    <!-- Trust badges row -->
+    <div class="max-w-3xl mx-auto mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-slate-500">
+      <span class="flex items-center gap-1.5">
+        <svg class="w-4 h-4 text-accent-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+        Datos en vivo
+      </span>
+      <span class="flex items-center gap-1.5">
+        <svg class="w-4 h-4 text-accent-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+        Gratis para usar
+      </span>
+      <span class="flex items-center gap-1.5">
+        <svg class="w-4 h-4 text-accent-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+        Sin registro
+      </span>
+      <span class="flex items-center gap-1.5">
+        <svg class="w-4 h-4 text-accent-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+        6 proveedores comparados
+      </span>
     </div>
 
     <div id="results" class="hidden max-w-4xl mx-auto mt-8">
@@ -243,9 +285,16 @@
 <footer class="bg-slate-900 text-slate-400 py-10 px-4">
   <div class="max-w-6xl mx-auto">
     <div class="flex flex-col sm:flex-row justify-between items-center gap-6 mb-7">
-      <div class="flex items-center gap-2 text-white font-bold text-lg">
-        <span class="text-2xl">💸</span>
-        <span>Cuánto<span class="text-brand-500">Llega</span></span>
+      <div class="flex items-center gap-2.5 font-extrabold text-lg tracking-tight">
+        <svg viewBox="0 0 130 130" class="w-9 h-9" aria-label="CuántoLlega logo">
+          <path d="M 28.6,44 A 42,42 0 0,1 101.4,44" fill="none" stroke="#1e56c2" stroke-width="11" stroke-linecap="round"/>
+          <polygon points="111.4,61.3 110.1,39.0 92.7,49.0" fill="#1e56c2"/>
+          <path d="M 101.4,86 A 42,42 0 0,1 28.6,86" fill="none" stroke="#22a63d" stroke-width="11" stroke-linecap="round"/>
+          <polygon points="18.6,68.7 19.9,91.0 37.3,81.0" fill="#22a63d"/>
+          <circle cx="65" cy="65" r="27" fill="#22a63d"/>
+          <text x="65" y="75" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="30" fill="white" text-anchor="middle">$</text>
+        </svg>
+        <span><span class="text-white">cuanto</span><span class="text-accent-500">llega</span><span class="text-brand-400 text-sm align-baseline">.com</span></span>
       </div>
       <nav class="flex gap-6 text-sm">
         <a href="#comparar" class="hover:text-white">Comparar</a>
@@ -264,22 +313,22 @@
 
 <script>
 const PROVIDERS = [
-  { id:'wise', name:'Wise', emoji:'🟢', fee:4.20, spread:0.006,
+  { id:'wise', name:'Wise', initials:'W', color:'#00B9FF', fee:4.20, spread:0.006,
     speed:'1–2 días hábiles', receive:'Cuenta bancaria',
-    affiliate:'https://wise.com/invite/u/#placeholder', note:'Tipo de cambio del mercado real' },
-  { id:'remitly', name:'Remitly', emoji:'🟠', fee:0, spread:0.018,
+    affiliate:'https://wise.prf.hn/click/camref:1011l5Jtar', note:'Tipo de cambio del mercado real' },
+  { id:'remitly', name:'Remitly', initials:'R', color:'#E5443B', fee:0, spread:0.018,
     speed:'Minutos (Express) / 3–5 días (Economy)', receive:'Banco / efectivo / Tigo Money',
     affiliate:'https://www.remitly.com/?ref=#placeholder', note:'Promociones para primer envío' },
-  { id:'xoom', name:'Xoom (PayPal)', emoji:'🔵', fee:4.99, spread:0.025,
+  { id:'xoom', name:'Xoom (PayPal)', initials:'X', color:'#003087', fee:4.99, spread:0.025,
     speed:'Minutos a horas', receive:'Banco / efectivo / Tigo Money',
     affiliate:'https://www.xoom.com/honduras/send-money?ref=#placeholder', note:'Bueno si ya tienes PayPal' },
-  { id:'westernunion', name:'Western Union', emoji:'🟡', fee:5.00, spread:0.030,
+  { id:'westernunion', name:'Western Union', initials:'WU', color:'#FFDD00', textColor:'#000', fee:5.00, spread:0.030,
     speed:'Minutos', receive:'Efectivo en miles de puntos',
     affiliate:'https://www.westernunion.com/us/en/send-money-online.html?ref=#placeholder', note:'Red enorme en HN, pero cara' },
-  { id:'moneygram', name:'MoneyGram', emoji:'🔴', fee:3.99, spread:0.025,
+  { id:'moneygram', name:'MoneyGram', initials:'M', color:'#DC1E34', fee:3.99, spread:0.025,
     speed:'Minutos', receive:'Efectivo / banco',
     affiliate:'https://www.moneygram.com/mgo/us/en/?ref=#placeholder', note:'Disponible en BAC, Atlántida, supermercados' },
-  { id:'ria', name:'Ria Money', emoji:'🟣', fee:2.99, spread:0.020,
+  { id:'ria', name:'Ria Money', initials:'R', color:'#F26925', fee:2.99, spread:0.020,
     speed:'Minutos a horas', receive:'Efectivo / banco',
     affiliate:'https://www.riamoneytransfer.com/?ref=#placeholder', note:'Buena opción para envíos chicos' }
 ];
@@ -327,16 +376,21 @@ function renderResults() {
     const diffText = isBest
       ? '<span class="text-accent-600 font-semibold">✓ Mejor opción</span>'
       : `<span class="text-slate-500">−L ${Math.abs(diff).toFixed(0)} menos</span>`;
+    const textColor = row.provider.textColor || '#FFFFFF';
     return `
       <div class="px-5 sm:px-6 py-5 ${idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'} ${isBest ? 'border-l-4 border-accent-500' : 'border-l-4 border-transparent'} grid sm:grid-cols-[1fr_auto_auto] items-center gap-4">
         <div>
-          <div class="flex items-center gap-2 font-bold text-slate-900">
-            <span class="text-xl">${row.provider.emoji}</span>
-            <span>${row.provider.name}</span>
-            ${isBest ? '<span class="text-[10px] uppercase font-bold bg-accent-500 text-white px-2 py-0.5 rounded">Recomendado</span>' : ''}
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-lg flex items-center justify-center font-extrabold text-sm shrink-0 shadow-sm" style="background:${row.provider.color};color:${textColor}">${row.provider.initials}</div>
+            <div>
+              <div class="flex items-center gap-2 font-bold text-slate-900">
+                <span>${row.provider.name}</span>
+                ${isBest ? '<span class="text-[10px] uppercase font-bold bg-accent-500 text-white px-2 py-0.5 rounded">Recomendado</span>' : ''}
+              </div>
+              <div class="text-xs text-slate-500 mt-0.5">${row.provider.speed} · ${row.provider.receive}</div>
+              <div class="text-[11px] text-slate-400">${row.provider.note}</div>
+            </div>
           </div>
-          <div class="text-xs text-slate-500 mt-1">${row.provider.speed} · ${row.provider.receive}</div>
-          <div class="text-[11px] text-slate-400 mt-0.5">${row.provider.note}</div>
         </div>
         <div class="text-right">
           <div class="text-2xl font-extrabold text-brand-900">L ${row.hnlReceived.toLocaleString('es-HN', {maximumFractionDigits: 0})}</div>
